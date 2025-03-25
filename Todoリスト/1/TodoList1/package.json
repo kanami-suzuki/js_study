@@ -6,9 +6,25 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "style:lint": "stylelint \"src/**/*.scss\"",
+    "es:lint": "eslint \"src/**/*.js\"",
+    "lint": "npm run html:lint && npm run style:lint -- --fix && npm run es:lint -- --fix"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "css-declaration-sorter": "^7.2.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.86.0",
+    "stylelint": "^16.16.0",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.3",
+    "stylelint-scss": "^6.11.1",
     "vite": "^6.2.0"
   }
 }
