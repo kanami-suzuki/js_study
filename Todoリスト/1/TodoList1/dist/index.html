@@ -6,29 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todoリスト1</title>
   <script type="module" crossorigin src="/assets/js/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/index.css">
 </head>
 
 <body>
-  <section class="todoTitle">
-    <p class="todoCounter"></p>
-    <h1>Todoリスト</h1>
-  </section>
-  <section class="todoBody">
-    <ul class="todoList_container">
-      <li class="todoList_item"></li>
-    </ul>
+  <main>
+    <section class="todoTitle">
+      <p class="todoCounter"></p>
+      <h1>Todoリスト</h1>
+    </section>
 
-    <form action="">
-      <label for="todoText" class="todoText">
-        <input type="text" name="todoText" id="todoText">
-      </label>
-      <label for="todoButton">
-        <input type="submit" value="追加">
-      </label>
-    </form>
-  </section>
+    <section class="todoBody">
+      <ul class="todoList_container">
+        <li class="todoList_item"></li>
+      </ul>
 
+      <form action="">
+        <label for="todoText" class="todoText">
+          <input type="text" name="todoText" id="todoText">
+        </label>
+        <label for="todoButton">
+          <input type="submit" value="追加">
+        </label>
+      </form>
+    </section>
 
+    <section class="todoBottom">
+      <button type="button">リセット</button>
+    </section>
+  </main>
 
 </body>
 
