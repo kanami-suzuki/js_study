@@ -7,5 +7,5 @@ const todoButton = document.querySelector('#todoButton');
 const todoBottom = document.querySelector('#todoBottom');
 
 todoButton.addEventListener('click', () => {
-  console.log("hello");
+  console.log(todoText.value);
 })

@@ -18,7 +18,7 @@ main {
 }
 
 .todoBody {
-  form {
+  .buttonArea {
     display: flex;
     justify-content: space-between;
   }
@@ -38,8 +38,9 @@ main {
     }
   }
 
-  label[for="todoButton"] {
-    input {
+  button {
+    span {
+      display: inline-block;
       padding: 2px 10px;
       border: 1px solid #000000;
       border-radius: 3px;
