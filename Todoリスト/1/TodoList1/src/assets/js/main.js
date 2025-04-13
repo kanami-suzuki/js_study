@@ -7,5 +7,8 @@ const todoButton = document.querySelector('#todoButton');
 const todoBottom = document.querySelector('#todoBottom');
 
 todoButton.addEventListener('click', () => {
-  console.log(todoText.value);
+  let newLi = document.createElement('li');
+  newLi.textContent = todoText.value;
+
+  todoList.appendChild(newLi)
 })
