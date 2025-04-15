@@ -14,6 +14,15 @@ todoButton.addEventListener('click', () => {
 
   todoList.appendChild(newLi);
   todoText.value = "";
-  top = top++;
-  bottom = bottom++;
+
+  let lis = []
+  lis.push = newLi;
+  console.log(newLi.innerHTML);
+  console.log(lis);
+  if (newLi) {
+    top = newLi.length;
+    console.log(top);
+    bottom = newLi.length;
+    console.log(bottom);
+  }
 })
