@@ -6,23 +6,21 @@ const todoText = document.querySelector('#todoText');
 const todoButton = document.querySelector('#todoButton');
 const todoBottom = document.querySelector('#todoBottom');
 
-top = 0;
-bottom = 0;
-todoButton.addEventListener('click', () => {
-  let newLi = document.createElement('li');
-  newLi.textContent = todoText.value;
+let toplist = 0;
+let bottomlist = 0;
+let lis = []
+if (todoText.value !== "") {
+  todoButton.addEventListener('click', () => {
+    let newLi = document.createElement('li');
+    newLi.textContent = todoText.value;
 
-  todoList.appendChild(newLi);
-  todoText.value = "";
+    toplist += 1;
+    bottomlist += 1;
 
-  let lis = []
-  lis.push = newLi;
-  console.log(newLi.innerHTML);
-  console.log(lis);
-  if (newLi) {
-    top = newLi.length;
-    console.log(top);
-    bottom = newLi.length;
-    console.log(bottom);
-  }
-})
+    todoList.appendChild(newLi);
+    todoText.value = "";
+
+    lis.push = newLi;
+    console.log(newLi.innerHTML);
+  })
+} else {}
