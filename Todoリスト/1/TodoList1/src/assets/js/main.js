@@ -9,15 +9,27 @@ const todoBottom = document.querySelector('#todoBottom');
 let toplist = 0;
 let bottomlist = 0;
 let lis = []
-todoButton.addEventListener('click', () => {
+
+const todo = () => {
   if (todoText.value !== "") {
-    let newLi = document.createElement('li');
-    newLi.textContent = todoText.value;
+    let li = document.createElement('li');
+    li.textContent = todoText.value;
+    let input = document.createElement('input')
+    input.setAttribute("type", "checkbox");
+    li.appendChild(input);
 
     toplist += 1;
     bottomlist += 1;
 
+    todoList.appendChild(li);
+    todoText.value = "";
+    lis.push = li;
+
     top.textContent = toplist;
     bottom.textContent = bottomlist;
   } else {}
+}
+
+todoButton.addEventListener('click', () => {
+  todo();
 })
