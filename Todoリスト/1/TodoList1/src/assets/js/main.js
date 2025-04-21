@@ -13,6 +13,7 @@ let lis = []
 const todo = () => {
   if (todoText.value !== "") {
     let li = document.createElement('li');
+    li.classList.add('todoItem');
     li.textContent = todoText.value;
     let input = document.createElement('input')
     input.setAttribute("type", "checkbox");
