@@ -13,11 +13,17 @@ let lis = []
 const todo = () => {
   if (todoText.value !== "") {
     let li = document.createElement('li');
-    li.classList.add('todoItem');
-    li.textContent = todoText.value;
-    let input = document.createElement('input')
+
+    let label = document.createElement('label');
+    label.classList.add('todoItem');
+    let input = document.createElement('input');
     input.setAttribute("type", "checkbox");
-    li.appendChild(input);
+    label.appendChild(input);
+    let span = document.createElement('span');
+    span.textContent = todoText.value;
+    label.appendChild(span);
+
+    li.appendChild(label);
 
     toplist += 1;
     bottomlist += 1;
