@@ -63,6 +63,41 @@ main {
 .todoItem {
   display: flex;
   align-items: center;
+
+  input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #8c8c8c;
+    border-radius: 10px;
+
+    appearance: none;
+
+    &:checked {
+      border: 1px solid #cccccc;
+      background-color: #f3f3f3;
+    }
+
+    &:checked::after {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background: #a1b99a;
+      content: "";
+    }
+
+    &:checked+span {
+      opacity: .5;
+    }
+  }
+
+  span {
+    display: block;
+    padding-left: 3px;
+  }
 }
 
 .todoBottom {
