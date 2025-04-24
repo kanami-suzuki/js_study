@@ -10,7 +10,7 @@ let toplist = 0;
 let bottomlist = 0;
 let lis = []
 
-const todo = () => {
+const todoElements = () => {
   if (todoText.value !== "") {
     let li = document.createElement('li');
 
@@ -25,18 +25,20 @@ const todo = () => {
 
     li.appendChild(label);
 
-    toplist += 1;
-    bottomlist += 1;
-
     todoList.appendChild(li);
     todoText.value = "";
-    lis.push = li;
-
-    top.textContent = toplist;
-    bottom.textContent = bottomlist;
   } else {}
 }
 
+const todoCount = () => {
+  toplist += 1;
+  bottomlist += 1;
+
+  top.textContent = toplist;
+  bottom.textContent = bottomlist;
+}
+
 todoButton.addEventListener('click', () => {
-  todo();
+  todoElements();
+  todoCount();
 })
