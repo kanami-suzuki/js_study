@@ -27,15 +27,19 @@ const todoElements = () => {
 
     todoList.appendChild(li);
     todoText.value = "";
+
+    toplist += 1;
+    bottomlist += 1;
+
+    top.textContent = toplist;
+    bottom.textContent = bottomlist;
+
+    lis.push(li);
   } else {}
 }
 
 const todoCount = () => {
-  toplist += 1;
-  bottomlist += 1;
-
-  top.textContent = toplist;
-  bottom.textContent = bottomlist;
+  console.log(lis);
 }
 
 todoButton.addEventListener('click', () => {
