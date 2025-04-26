@@ -39,7 +39,10 @@ const todoElements = () => {
 }
 
 const todoCount = () => {
-  console.log(lis);
+  for (let i = 0; i < lis.length; i++) {
+    console.log(lis);
+    console.log(lis[i]);
+  }
 }
 
 todoButton.addEventListener('click', () => {
