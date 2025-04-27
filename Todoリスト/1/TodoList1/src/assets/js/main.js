@@ -39,9 +39,12 @@ const todoElements = () => {
 }
 
 const todoCount = () => {
+  let input = document.querySelectorAll('.todoItem input');
   for (let i = 0; i < lis.length; i++) {
     console.log(lis);
-    console.log(lis[i]);
+    if (input.checked) {
+      console.log(input[i]);
+    }
   }
 }
 
