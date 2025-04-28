@@ -11,44 +11,52 @@ let bottomlist = 0;
 let lis = []
 
 const todoElements = () => {
-  if (todoText.value !== "") {
-    let li = document.createElement('li');
+  let li = document.createElement('li');
 
-    let label = document.createElement('label');
-    label.classList.add('todoItem');
-    let input = document.createElement('input');
-    input.setAttribute("type", "checkbox");
-    label.appendChild(input);
-    let span = document.createElement('span');
-    span.textContent = todoText.value;
-    label.appendChild(span);
+  let label = document.createElement('label');
+  label.classList.add('todoItem');
+  let input = document.createElement('input');
+  input.setAttribute("type", "checkbox");
+  label.appendChild(input);
+  let span = document.createElement('span');
+  span.textContent = todoText.value;
+  label.appendChild(span);
 
-    li.appendChild(label);
+  li.appendChild(label);
 
-    todoList.appendChild(li);
-    todoText.value = "";
-
-    toplist += 1;
-    bottomlist += 1;
-
-    top.textContent = toplist;
-    bottom.textContent = bottomlist;
-
-    lis.push(li);
-  } else {}
+  todoList.appendChild(li);
+  todoText.value = "";
+  lis.push(li);
 }
-
 const todoCount = () => {
-  let input = document.querySelectorAll('.todoItem input');
-  for (let i = 0; i < lis.length; i++) {
-    console.log(lis);
-    if (input.checked) {
-      console.log(input[i]);
-    }
-  }
+  toplist += 1;
+  bottomlist += 1;
+
+  top.textContent = toplist;
+  bottom.textContent = bottomlist;
 }
 
 todoButton.addEventListener('click', () => {
-  todoElements();
-  todoCount();
+  if (todoText.value !== "") {
+    todoElements();
+    todoCount();
+  } else {}
+  for (let i = 0; i < lis.length; i++) {
+    console.log(lis);
+    let todoinput = document.querySelectorAll('.todoItem input');
+    console.log(todoinput[i]);
+    if (todoinput[i].checked) {
+      console.log(todoinput[i]);
+    }
+  }
 })
+let todoinput = document.querySelectorAll('.todoItem input');
+for (let i = 0; i < lis.length; i++) {
+  console.log(lis);
+  todoinput[i].addEventListener('change', () => {
+    console.log(todoinput[i]);
+    if (todoinput[i].checked) {
+      console.log(todoinput[i]);
+    }
+  })
+}
