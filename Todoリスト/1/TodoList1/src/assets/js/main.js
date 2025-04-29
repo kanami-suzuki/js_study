@@ -8,7 +8,7 @@ const todoBottom = document.querySelector('#todoBottom');
 
 let toplist = 0;
 let bottomlist = 0;
-let lis = []
+let lis = [];
 
 const todoElements = () => {
   let li = document.createElement('li');
@@ -35,28 +35,21 @@ const todoCount = () => {
   top.textContent = toplist;
   bottom.textContent = bottomlist;
 }
-
 todoButton.addEventListener('click', () => {
   if (todoText.value !== "") {
     todoElements();
     todoCount();
-  } else {}
-  for (let i = 0; i < lis.length; i++) {
     console.log(lis);
-    let todoinput = document.querySelectorAll('.todoItem input');
-    console.log(todoinput[i]);
-    if (todoinput[i].checked) {
-      console.log(todoinput[i]);
-    }
+  } else {}
+})
+const todoItem = document.querySelector('.todoItem input');
+todoItem.addEventListener('change', () => {
+  if (document.querySelector('.todoItem')) {
+    console.log(true);
   }
 })
-let todoinput = document.querySelectorAll('.todoItem input');
-for (let i = 0; i < lis.length; i++) {
-  console.log(lis);
-  todoinput[i].addEventListener('change', () => {
-    console.log(todoinput[i]);
-    if (todoinput[i].checked) {
-      console.log(todoinput[i]);
-    }
-  })
-}
+// for (let i = 0; i < todoinput.length; i++) {
+//   if (todoinput[i].checked) {
+//     console.log(todoinput[i]);
+//   }
+// }
