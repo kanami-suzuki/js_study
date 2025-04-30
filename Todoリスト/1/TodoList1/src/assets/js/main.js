@@ -39,17 +39,18 @@ todoButton.addEventListener('click', () => {
   if (todoText.value !== "") {
     todoElements();
     todoCount();
-    console.log(lis);
   } else {}
-})
-const todoItem = document.querySelector('.todoItem input');
-todoItem.addEventListener('change', () => {
-  if (document.querySelector('.todoItem')) {
-    console.log(true);
+  const todoItem = document.querySelectorAll('.todoItem input');
+  for (let i = 0; i < todoItem.length; i++) {
+    todoItem[i].addEventListener('change', () => {
+      if (todoItem[i].checked) {
+        toplist -= 1;
+        top.textContent = toplist;
+        console.log(toplist)
+      } else {
+        toplist += 1;
+        top.textContent = toplist;
+      }
+    })
   }
 })
-// for (let i = 0; i < todoinput.length; i++) {
-//   if (todoinput[i].checked) {
-//     console.log(todoinput[i]);
-//   }
-// }
