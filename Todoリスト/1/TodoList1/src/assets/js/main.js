@@ -42,7 +42,8 @@ todoButton.addEventListener('click', () => {
   } else {}
   const todoItem = document.querySelectorAll('.todoItem input');
   for (let i = 0; i < todoItem.length; i++) {
-    todoItem[i].addEventListener('change', () => {
+    todoItem[i].addEventListener('change', (e) => {
+      e.preventDefault();
       if (todoItem[i].checked) {
         toplist -= 1;
         top.textContent = toplist;
