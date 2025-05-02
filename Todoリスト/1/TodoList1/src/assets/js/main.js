@@ -45,11 +45,11 @@ todoButton.addEventListener('click', () => {
     todoItem[i].addEventListener('change', (e) => {
       e.preventDefault();
       if (todoItem[i].checked) {
-        toplist -= 1;
+        toplist--;
         top.textContent = toplist;
         console.log(toplist)
       } else {
-        toplist += 1;
+        toplist++;
         top.textContent = toplist;
       }
     })
