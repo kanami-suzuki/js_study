@@ -31,25 +31,23 @@ const todoElements = () => {
 const todoCount = () => {
   toplist += 1;
   bottomlist += 1;
-
-  top.textContent = toplist;
-  bottom.textContent = bottomlist;
 }
 todoButton.addEventListener('click', () => {
   if (todoText.value !== "") {
     todoElements();
-    todoCount();
+    top.textContent = lis.length;
+    bottom.textContent = lis.length;
   } else {}
+
   const todoItem = document.querySelectorAll('.todoItem input');
   for (let i = 0; i < todoItem.length; i++) {
     todoItem[i].addEventListener('change', () => {
-      console.log(this)
       if (todoItem[i].checked) {
-        toplist--;
+        top.textContent = lis.length - 1;
+        console.log(top)
       } else {
-        toplist++;
+        top.textContent = lis.length;
       }
-      top.textContent = toplist;
     })
   }
 })
