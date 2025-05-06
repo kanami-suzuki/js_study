@@ -37,16 +37,17 @@ todoButton.addEventListener('click', () => {
     todoElements();
     top.textContent = lis.length;
     bottom.textContent = lis.length;
+    console.log(lis);
   } else {}
 
   const todoItem = document.querySelectorAll('.todoItem input');
+  const item = lis.filter((c) => {
+    return c.checked;
+  })
   for (let i = 0; i < todoItem.length; i++) {
     todoItem[i].addEventListener('change', () => {
       if (todoItem[i].checked) {
-        top.textContent = lis.length - 1;
-        console.log(top)
-      } else {
-        top.textContent = lis.length;
+        console.log(item);
       }
     })
   }
