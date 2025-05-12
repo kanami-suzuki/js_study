@@ -26,29 +26,22 @@ const todoElements = () => {
 
   todoList.appendChild(li);
   todoText.value = "";
-  lis.push(li);
+
+  input.addEventListener('change', () => {
+    const unchecked = lis.filter(item => !item.checked);
+    top.textContent = unchecked.length;
+  });
+
+  return input;
 }
-const todoCount = () => {
-  toplist += 1;
-  bottomlist += 1;
-}
+
 todoButton.addEventListener('click', () => {
   if (todoText.value !== "") {
-    todoElements();
-    top.textContent = lis.length;
+    const newInput = todoElements();
+    lis.push(newInput);
+
+    top.textContent = lis.filter(item => !item.checked).length;;
     bottom.textContent = lis.length;
     console.log(lis);
   } else {}
-
-  const todoItem = document.querySelectorAll('.todoItem input');
-  const item = lis.filter((c) => {
-    return c.checked;
-  })
-  for (let i = 0; i < todoItem.length; i++) {
-    todoItem[i].addEventListener('change', () => {
-      if (todoItem[i].checked) {
-        console.log(item);
-      }
-    })
-  }
 })
