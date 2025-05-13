@@ -42,6 +42,5 @@ todoButton.addEventListener('click', () => {
 
     top.textContent = lis.filter(item => !item.checked).length;;
     bottom.textContent = lis.length;
-    console.log(lis);
   } else {}
 })
