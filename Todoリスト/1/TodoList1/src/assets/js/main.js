@@ -44,3 +44,10 @@ todoButton.addEventListener('click', () => {
     bottom.textContent = lis.length;
   } else {}
 })
+
+const rsb = document.querySelector('#todoBottom');
+rsb.addEventListener('click', () => {
+  top.textContent = '0';
+  bottom.textContent = '0';
+
+})
