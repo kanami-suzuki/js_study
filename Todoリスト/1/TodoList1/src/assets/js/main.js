@@ -49,5 +49,7 @@ const rsb = document.querySelector('#todoBottom');
 rsb.addEventListener('click', () => {
   top.textContent = '0';
   bottom.textContent = '0';
-
+  while (todoList.firstChild) {
+    todoList.removeChild(todoList.firstChild);
+  }
 })
