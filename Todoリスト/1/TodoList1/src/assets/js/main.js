@@ -4,7 +4,6 @@ let bottom = document.querySelector('#bottom');
 const todoList = document.querySelector('.todoList');
 const todoText = document.querySelector('#todoText');
 const todoButton = document.querySelector('#todoButton');
-const todoBottom = document.querySelector('#todoBottom');
 
 let toplist = 0;
 let bottomlist = 0;
@@ -40,9 +39,9 @@ todoButton.addEventListener('click', () => {
     const newInput = todoElements();
     lis.push(newInput);
 
-    top.textContent = lis.filter(item => !item.checked).length;;
+    top.textContent = lis.filter(item => !item.checked).length;
     bottom.textContent = lis.length;
-  } else {}
+  }
 })
 
 const rsb = document.querySelector('#todoBottom');
