@@ -1,14 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Todoリスト1</title>
+  <link rel="stylesheet" href="assets/scss/style.scss">
 </head>
 
 <body>
+  <main>
+    <section class="todoTitle">
+      <p class="todoCounter"><span id="top">0</span>/<span id="bottom">0</span></p>
+      <h1>Todoリスト</h1>
+    </section>
 
+    <section class="todoBody">
+      <ul class="todoList">
+      </ul>
+
+      <div class="buttonArea">
+        <label for="todoText" class="todoText">
+          <input type="text" name="todoText" id="todoText">
+        </label>
+        <button id="todoButton">
+          <span>追加</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="todoBottom">
+      <button type="button" id="todoBottom">リセット</button>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js" type="module"></script>
 </body>
 
 </html>

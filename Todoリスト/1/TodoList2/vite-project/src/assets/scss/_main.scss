@@ -1,0 +1,112 @@
+@use "style/group"as *;
+
+main {
+  width: 100%;
+  padding: 8% 10%;
+  border-radius: 5px;
+  box-shadow: 0 5px 5px 1px rgba(94, 94, 94, .3);
+  background-color: #ffffff;
+}
+
+.todoTitle {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 16px;
+  }
+}
+
+.todoBody {
+  .buttonArea {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  label[for="todoText"] {
+    width: 80%;
+
+    input {
+      width: 100%;
+      border: 1px solid #000000;
+      border-radius: 3px;
+
+      &:active,
+      &:focus {
+        background-color: #e2ffd9;
+      }
+    }
+  }
+
+  button {
+    span {
+      display: inline-block;
+      padding: 2px 10px;
+      border: 1px solid #000000;
+      border-radius: 3px;
+      box-shadow: 0 0 4px 2px #d7d7d7;
+      background-color: #e2ffd9;
+      font-size: 15px;
+      transition: all .3s;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.todoList {
+  padding: 30px 0;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+
+  input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #8c8c8c;
+    border-radius: 10px;
+
+    appearance: none;
+
+    &:checked {
+      border: 1px solid #cccccc;
+      background-color: #f3f3f3;
+    }
+
+    &:checked::after {
+      width: 10px;
+      height: 10px;
+      border-radius: 10px;
+      background: #a1b99a;
+      content: "";
+    }
+
+    &:checked+span {
+      opacity: .5;
+    }
+  }
+
+  span {
+    display: block;
+    padding-left: 3px;
+  }
+}
+
+.todoBottom {
+  padding-top: 30px;
+  text-align: center;
+
+  button {
+    padding: 3px 20px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+  }
+}
